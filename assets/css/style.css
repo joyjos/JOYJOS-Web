@@ -171,45 +171,6 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Logo
---------------------------------------------------------------*/
-
-.header-logo {
-    z-index: 501;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 110px;
-    top: 20%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.header-logo a {
-    display: block;
-    padding: 0;
-    outline: 0;
-    border: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.header-logo img {
-    width: 168px;
-    height: 183px;
-}
-
-@media (max-width: 992px) {
-    .header-logo img {
-        width: 116px;
-        height: 126px;
-    }
-}
-
-
-/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 
@@ -338,6 +299,10 @@ h6 {
     background-color: #197AAA;
 }
 
+.mobile-nav-toggle.home {
+    color: #fff;
+}
+
 
 /*--------------------------------------------------------------
 # Home Section
@@ -397,7 +362,6 @@ h6 {
     display: inline-block;
     color: #fff;
     line-height: 1;
-    margin-right: 20px;
     transition: 0.3s;
 }
 
@@ -408,6 +372,7 @@ h6 {
 @media (max-width: 992px) {
     #home {
         text-align: center;
+        background: url("../img/home-bg.jpg") top left no-repeat;
     }
     #home h1 {
         font-size: 32px;
@@ -417,6 +382,29 @@ h6 {
         margin-top: 10px;
         font-size: 20px;
         line-height: 24px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+
+.home-logo {
+    padding-bottom: 20px;
+    margin-top: -20px;
+}
+
+.home-logo img {
+    width: 168px;
+    height: 183px;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .home-logo img {
+        width: 137px;
+        height: 148px;
     }
 }
 
@@ -1009,17 +997,16 @@ section {
     }
 }
 
+@media (max-width: 360px) {
+    #cookiesms {
+        width: 350px;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Política de Cookies
 --------------------------------------------------------------*/
-
-#texto {
-    width: 950px;
-    margin: 0 auto;
-    padding-top: 50px;
-    text-align: justify;
-}
 
 #texto p {
     padding-bottom: 15px;
