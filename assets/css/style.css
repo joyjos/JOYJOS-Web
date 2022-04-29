@@ -1073,6 +1073,53 @@ section {
 
 
 /*--------------------------------------------------------------
+# Error 404
+--------------------------------------------------------------*/
+
+.fondo {
+    background-color: #f2f3f5;
+}
+
+.error404 {
+    text-align: center;
+    font-size: 14px;
+}
+
+a.logo {
+    display: block;
+    width: 168px;
+    height: 183px;
+}
+
+.poppins {
+    font-size: 200px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffc803;
+    margin-bottom: -25px;
+}
+
+
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+
+#joyjos {
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+#joyjos:hover {
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    /*Para Chrome y Safari*/
+    -webkit-animation-duration: .2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+
+/*--------------------------------------------------------------
 # Texto seleccionado
 --------------------------------------------------------------*/
 
