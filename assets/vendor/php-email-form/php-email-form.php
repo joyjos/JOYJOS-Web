@@ -2,10 +2,10 @@
 $to = "info@joyjos.eu";
 $subject = "JOYJOS";
 $from = $_POST['email'];
-$message = "Nombre: " . $_POST['name'];
+$message = "Nombre: " . trim($_POST['name']);
 $message .= "\nEmail: " . $from;
-$message .= "\nAsunto: " . $_POST['subject'];
-$message .= "\n\nMensaje: " . $_POST['message'];
+$message .= "\nAsunto: " . trim($_POST['subject']);
+$message .= "\n\nMensaje: " . trim($_POST['message']);
 $headers = "From: $e";
 $headers .= "\nReply-To: $e";
 
