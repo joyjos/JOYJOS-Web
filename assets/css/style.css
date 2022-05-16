@@ -1132,3 +1132,18 @@ a.logo {
     background-color: #4C99C0;
     color: #fff;
 }
+
+
+/*--------------------------------------------------------------
+# reCAPTCHA
+--------------------------------------------------------------*/
+
+.recaptcha {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

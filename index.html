@@ -26,6 +26,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -204,7 +205,7 @@
                         </div>
                         <div class="resume-item">
                             <h4>Técnico Superior en Desarrollo de Aplicaciones Web</h4>
-                            <h5>2020</h5>
+                            <h5>2017 - 2020</h5>
                             <p><em>CIFP La Laboral, Gijón</em></p>
                             <p>HTML5, CSS3, JavaScript, Java, Spring Boot, Angular, TypeScript, SQL, MySQL, Git</p>
                         </div>
@@ -382,7 +383,7 @@
 
                     <div class="col-lg-8 mt-5 mt-lg-0">
 
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form id="form" action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Tu nombre" required>
@@ -395,15 +396,22 @@
                                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                                <textarea id="message" class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
                             </div>
+                            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                             <div class="my-3">
                                 <div class="loading">Cargando</div>
                                 <div class="error-message"></div>
                                 <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
                             </div>
-                            <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+                            <div class="text-center"><button id="enviar" type="submit">Enviar mensaje</button></div>
                         </form>
+
+                        <div class="recaptcha">
+                            Este sitio está protegido por reCAPTCHA y se aplican las
+                            <a href="https://policies.google.com/terms" target="_blank">Condiciones de Servicio</a> y
+                            <a href="https://policies.google.com/privacy" target="_blank">la Política de Privacidad</a> de Google
+                        </div>
 
                     </div>
 
@@ -486,6 +494,21 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
+    </script>
+
+    <!-- reCAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeMaOkfAAAAAK_Ygz9PDRhjZlFprkOvlD_TelHt"></script>
+
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LeMaOkfAAAAAK_Ygz9PDRhjZlFprkOvlD_TelHt', {
+                    action: 'formulario'
+                })
+                .then(function(token) {
+                    var recaptchaResponse = document.getElementById('recaptchaResponse');
+                    recaptchaResponse.value = token;
+                });
+        });
     </script>
 
 </body>

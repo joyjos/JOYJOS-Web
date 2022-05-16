@@ -4,6 +4,7 @@ $subject = "JOYJOS";
 $from = $_POST['email'];
 $message = "Nombre: " . $_POST['name'];
 $message .= "\nEmail: " . $from;
+$message .= "\nAsunto: " . $_POST['subject'];
 $message .= "\n\nMensaje: " . $_POST['message'];
 $headers = "From: $e";
 $headers .= "\nReply-To: $e";
