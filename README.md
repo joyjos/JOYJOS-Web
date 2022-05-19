@@ -1,4 +1,4 @@
-## JOYJOS Web Developmen
+## JOYJOS Web Development
 Proyecto desarrollado con HTML5, CSS3, JavaScript, jQuery y PHP
 
 ### Demo
